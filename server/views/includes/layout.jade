@@ -1,0 +1,18 @@
+doctype
+html
+    head
+        title ViWare Courses
+        //link(rel="stylesheet" href="https://bootswatch.com/yeti/bootstrap.min.css")
+        link(rel="stylesheet" href="https://bootswatch.com/sandstone/bootstrap.min.css")
+        link(rel="stylesheet" href="https://bootswatch.com/slate/bootstrap.min.css")
+        link(rel="stylesheet" href="/lib/toastr/toastr.min.css")
+        link(rel="stylesheet" href="/css/site.css")
+        link(href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css')
+        link(href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css')
+        link(href="/css/font-awesome.min.css" rel="stylesheet" type="text/css")
+        link(href="/css/custom.css" rel="stylesheet" type="text/css")
+    body(ng-app="app")
+        block main-content
+
+        include scripts
+        include currentUser

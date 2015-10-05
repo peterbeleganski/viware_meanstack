@@ -1,0 +1,77 @@
+@import url('elements-bootstrap.css');
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+
+
+/* IMAGE STYLES */
+
+
+
+/* BOXES */
+
+
+
+
+
+body div ul.blog-tags li i,
+body div .box.tags ul li i {
+	color: #FFFFFF;
+	position:relative;
+	top:1px;
+	font-size: 14px;
+}
+.break-word{
+    word-wrap: break-word;
+}
+
+
+#services .row div {
+	text-align:center;
+}
+
+#services .row div i {
+	border:10px solid #bd362f;
+	font-size:50px;
+	width:130px;
+	height:130px;
+	padding-top:30px;
+	border-radius:50%;
+	color:#999999;
+}
+
+
+
+#services h4 {
+	font-size:20px;
+	font-weight:bold;
+	margin:20px 0 15px;
+	color:#fff;
+}
+
+#services p {
+	padding:0 15px;	
+	line-height:22px;
+	margin:0;
+	color:#fff;
+	font-size:13px;
+}
+
+#services > div.row > div  i{
+    color:white;
+}
+
+body > div > div:nth-child(1) > div > div > div.col-md-6.img-header > img {
+    max-width: 400px;
+    max-height: 200px;
+}
+
+.text-list{
+    font-size:28px;
+}
+
+
+
+

@@ -1,0 +1,83 @@
+.container
+    .jumbotron.home-page-header
+        .row
+            .col-md-6.text-center
+                h1 ViWare Courses
+                h2 Interactive video tutorials
+                div.text-left
+                    div
+                        div(ng-controller="LoginCtrl")
+                            a.btn.btn-primary(href="#/signup") Register for free ! &nbsp;
+                            span &nbsp;&nbsp;&nbsp;
+                            a.btn.btn-success(ng-click="open('sm')") Already have account ?
+            .col-md-6.img-header.text-center
+                img(src="/img/course.png")
+.container
+    hr
+    .row
+        br
+        .col-md-5(ng-controller="GalleryJsController")
+            div
+                carousel(interval="myInterval")
+                    slide(ng-repeat="slide in slides", active="slide.active")
+                        img(ng-src="{{slide.image}}" style="margin:auto;height:220px;")
+                        .carousel-caption
+
+
+        .col-md-7.text-center
+            p.text-list Why to use JavaScript ?
+            blockquote.text-left
+                p JavaScript is the programming language of HTML and the Web. Programming makes computers do what you want them to do. JavaScript is easy to learn.
+                small You can start learning JavaScript here in ViWare.
+                a.btn-sm.btn-primary(href="#/courses") Go to Courses
+    br
+    hr
+    br
+    .row
+        br
+        .col-md-7.text-center
+            p.text-list Why to use Java ?
+            blockquote.text-left
+                p Java is used to build applications and platforms for a number of devices, including computers, laptops, gaming consoles, Blu-ray players, car navigation systems, medical monitoring devices, parking meters, lottery terminals and smartphones.
+                small You can start learning Java here in ViWare
+                a.btn-sm.btn-primary(href="#/courses") Go to Courses
+        .col-md-5(ng-controller="GalleryJavaController")
+            div
+                carousel(interval="myInterval")
+                    slide(ng-repeat="slide in slides", active="slide.active")
+                        img(ng-src="{{slide.image}}" style="margin:auto;height:220px;max-width:100%;")
+                        .carousel-caption
+
+    br
+    br
+    .well
+        form.form-horizontal(name="messageForm")
+            fieldset
+                legend.text-center Send message to ViWare Team
+                .form-group
+                    label.col-md-2.control-label(for="first-name") First Name
+                    .col-md-8
+                        input.form-control(type="text", placeholder="First Name..", ng-model="user.firstName", required)
+                .form-group
+                    label.col-md-2.control-label(for="last-name") Last Name
+                    .col-md-8
+                        input.form-control(type="text", placeholder="Last Name..", ng-model="user.lastName", required)
+                .form-group
+                    label.col-md-2.control-label(for="email") Email
+                    .col-md-8
+                        input.form-control(type="email", placeholder="Email..", ng-model="user.email", required)
+                .form-group
+                    label.col-md-2.control-label(for="messageText") Message
+                    .col-md-8
+                        textarea.form-control(placeholder="Your message...",ng-model="user.message" required=)
+
+                .form-group
+                    .col-sm-offset-2.col-md-10
+                        button.btn.btn-primary(ng-click="sendMessage(user)", ng-disabled="messageForm.$invalid" ) Send
+                        a.btn.btn-default(href="#/") Cancel
+
+
+
+
+
+

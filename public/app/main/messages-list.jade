@@ -1,0 +1,32 @@
+.container(ng-controller="MessageListCtrl")
+    .row
+        .col-md-2
+            h4.text-center  Search Message
+        .col-md-4
+            input.form-control(type="text" placeholder="Search" ng-model="search")
+        .col-md-2
+            h4.text-center  Sort
+        .col-md-4
+            select.form-control(ng-model="sort")
+                option(value=" " ng-selected="'true'") Default
+                option(value="published") Date
+    br
+    br
+    .row
+        .col-md-6(ng-repeat="message in messages | filter:search | orderBy: sort" ng-show="isActive(message._id)")
+            .panel.panel-info
+                .panel-heading.text-center {{message.firstName }} {{ message.lastName }}
+                .panel-body
+                    .row
+                        .col-md-6
+                            h5
+                                strong Date sent:
+                                span.text-muted {{ message.date | date }}
+                            h5
+                                strong Email:
+                                span.text-muted {{ message.email }}
+                            btn.btn.btn-danger(ng-click="remove(message)") Remove
+                        .col-md-5.text-center
+                            .panel
+                                .panel-body
+                                    p.break-word {{ message.message }}

@@ -1,0 +1,28 @@
+extends includes/layout
+block main-content
+    nav.nav.navbar-default(ng-controller="LoginCtrl")
+        .container
+            .navbar-header
+                a.navbar-brand(href="#/") ViWare Courses
+            .navbar-collapse.collapse
+                ul.nav.navbar-nav
+                    li
+                        a(href="#/") Home
+                    li
+                        a(href="#/courses") Courses
+                    li(ng-show="identity.currUser.isAdmin()")
+                        a(href="#/admin-courses") Admin
+                    li(ng-show="identity.currUser.isAdmin()")
+                        a(href="#/add-course") Add Video
+                    li(ng-show="identity.currUser.isAdmin()")
+                        a(href="#/admin-messages") Messages
+                div(ng-include="'partials/account/login'")
+    section
+    br
+    br
+    br
+    div(ng-view)
+
+
+    footer
+        p.text-center &copy; ViWare Courses

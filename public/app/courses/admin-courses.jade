@@ -1,0 +1,28 @@
+.container
+    .jumbotron
+        .row.text-center
+            .col-md-6
+                h1 Admin panel
+                h2 ViWare videos information
+            .col-md-6
+                img(width="300",src="http://static.planetminecraft.com/files/resource_media/screenshot/1229/103_at-your-admin-service-logo_2958421.jpg")
+    table.table
+        thead
+            th.text-center Course Title
+            th.text-center Published
+            th.text-center Instructor
+            th.text-center Url
+            th.text-center Action
+        tbody
+            tr.text-center.text-info(ng-repeat="course in courses" ng-show="isActive(course._id)")
+                    td {{ course.title | uppercase}}
+                    td {{course.published | date }}
+                    td {{ course.instructor }}
+                    td {{ course.url }}
+                    td.btn.btn-danger.btn-lg(ng-click="remove(course)") Remove
+
+
+
+
+
+

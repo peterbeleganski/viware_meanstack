@@ -1,0 +1,7 @@
+.container
+    h2 {{course.title}}
+    p {{course.published | date }}
+    .jumbotron.text-center
+        iframe(allowfullscreen ng-src="{{trustSrc(course.url)}}")
+    ul
+        li(ng-repeat="tag in course.tags") {{tag}}

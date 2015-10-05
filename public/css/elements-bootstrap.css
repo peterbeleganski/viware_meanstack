@@ -1,0 +1,42 @@
+
+.content-item {
+	padding:30px 0;
+}
+
+.content-item.grey {
+	background-color:#F0F0F0;
+	padding:50px 0;
+	height: 100%;
+}
+
+.content-item h2 {
+	font-weight:700;
+	font-size:35px;
+	text-transform:uppercase;
+	margin:20px 0;
+}
+
+.content-item h4 {
+	font-weight:400;
+	font-size:20px;
+    column-rule: #ffffff;
+	margin:10px 0 15px;
+	padding:0;
+}
+
+#services > div.row > div > h4 {
+    color:white;
+}
+
+.content-headline {
+	height:1px;
+	text-align:center;
+	margin:20px 0 70px;
+}
+
+.content-headline h2 {
+	background-color:#bd362f;
+	display:inline-block;
+	margin:-20px auto 0;
+	padding:5px 20px;
+}

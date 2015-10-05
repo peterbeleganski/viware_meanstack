@@ -1,0 +1,6 @@
+div(ng-repeat="course in courses | orderBy : '-published' | limitTo: 10")
+    .row
+        .col-md-4
+            | {{course.published | date:'MMM d'}}
+        .col-md-8
+            a(href="#/courses/{{course._id}}") {{ course.title }}

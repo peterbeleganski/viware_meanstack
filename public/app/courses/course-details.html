@@ -1,0 +1,1 @@
+<div class="container"><h2>{{course.title}}</h2><p>{{course.published | date }}</p><div class="jumbotron text-center"><iframe allowfullscreen="allowfullscreen" ng-src="{{trustSrc(course.url)}}"></iframe></div><ul><li ng-repeat="tag in course.tags">{{tag}}</li></ul></div>

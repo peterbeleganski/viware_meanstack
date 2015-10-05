@@ -1,0 +1,39 @@
+.container
+    .row
+        .col-md-10
+            .well
+                form.form-horizontal(name="addCourseForm")
+                    fieldset
+                        legend.text-center Create new Course
+                        .form-group
+                            label.col-md-2.control-label(for="title") Title
+                            .col-md-8
+                                input.form-control(type="text", placeholder="Title..", ng-model="course.title", required)
+                        .form-group
+                            label.col-md-2.control-label(for="published") Date published
+                            .col-md-8
+                                input.form-control(type="date", placeholder="Published..", ng-model="course.published", required)
+                        .form-group
+                            label.col-md-2.control-label(for="instructor") Instructor
+                            .col-md-8
+                                input.form-control(type="text", placeholder="Instructor..", ng-model="course.instructor", required)
+                        .form-group
+                            label.col-md-2.control-label(for="url") Url
+                            .col-md-8
+                                input.form-control(type="text", placeholder="Url..", ng-model="course.url", required)
+                        .form-group
+                            label.col-md-2.control-label(for="tag") Course Tag
+                            .col-md-8
+                                input.form-control(type="text", placeholder="Course Tag..", ng-model="course.tag", required)
+                        .form-group
+                            label.col-md-2.control-label(for="tag") Img url
+                            .col-md-8
+                                input.form-control(type="text", placeholder="Img Url..", ng-model="course.img")
+
+
+                        .form-group
+                            .col-sm-offset-2.col-md-10
+                                button.btn.btn-success(ng-click="addCourse(course)", ng-disabled="addCourseForm.$invalid" ) Create
+                                a.btn.btn-danger(href="#/") Cancel
+
+

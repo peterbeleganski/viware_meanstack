@@ -1,0 +1,42 @@
+.navbar-right(ng-controller="LoginCtrl")
+    form.navbar-form(ng-hide="identity.isAuthenticated()")
+        div(ng-controller='LoginCtrl')
+            script(type='text/ng-template', id='myModalContent.html')
+                div(class="modal-header").text-center
+                    h3(class="modal-title") Login!
+                div(class="modal-body")
+                    .row
+                        .col-md-6
+                            form
+                                .form-group.text-center
+                                    input.form-control(type="text"  placeholder="Username" ng-model="user.username")
+                                .form-group.text-center
+                                    input.form-control(type="password" placeholder="Password" ng-model="user.password")
+                                p.text-muted Don't have account ? Sign up for free!
+                                button.btn.btn-success(type="submit",ng-click="ok(user)") Login
+                                a.btn.btn-warning.pull-right(href="#/signup", ng-click="cancel()") Sign Up
+                        .col-md-6.text-center
+                            img(width="100px",src="http://iconizer.net/files/I_love_icons/orig/lock.png")
+                div(class="modal-footer")
+                    button(class="btn btn-warning" ng-click="cancel()") Cancel
+            button.btn.btn-primary(ng-click="open('sm')")
+                span Login &nbsp;
+                    i(class="fa fa-sign-in") &nbsp;
+            a.btn.btn-primary(href="#/signup")
+                span Sign Up &nbsp;
+                    i(class="fa fa-user")
+
+    ul.nav.navbar-nav.navbar-right(ng-show="identity.isAuthenticated()")
+        li.dropdown
+            a.dropdown-toggle(href="", data-toggle="dropdown")
+                | {{ identity.currUser.firstName + ' ' + identity.currUser.lastName}}
+                span.caret
+            ul.dropdown-menu
+                li(ng-show="identity.currUser.isAdmin()")
+                    a(href="#/admin/users") Users
+                li(ng-show="identity.isAuthenticated()")
+                    a(href="#/profile") Profile
+                li
+                    a(href="" ng-click="logout()") Sign out
+
+
